@@ -7,19 +7,32 @@
 
 import SwiftUI
 import FamilyControls
+import DeviceActivity
+import ManagedSettings
+
+struct ExampleView: View {
+    @EnvironmentObject var model: MyModel
+
+    public var body: some View {
+        VStack {
+        }
+    }
+}
+
 
 struct ContentView: View {
     @State private var isDiscouragedPresented = false
-    @State private var isEncouragedPresented = false
     
     @EnvironmentObject var model: MyModel
     
     var body: some View {
         let center = AuthorizationCenter.shared
         VStack {
-            Button("Select Apps to Discourage") {
+            Text("Setlect apps to set a daily limit")
+            Button("Add limit") {
                 isDiscouragedPresented = true
             }
+            .buttonStyle(.bordered)
             .familyActivityPicker(isPresented: $isDiscouragedPresented, selection: $model.selectionToDiscourage)
         }
         .onChange(of: model.selectionToDiscourage) { newSelection in
@@ -33,6 +46,8 @@ struct ContentView: View {
                 }
             }
         }
+        ExampleView()
+            .environmentObject(model)
     }
 }
 

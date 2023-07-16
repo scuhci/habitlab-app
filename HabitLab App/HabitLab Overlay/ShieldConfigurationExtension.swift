@@ -32,9 +32,9 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
         return ShieldConfiguration(
             backgroundBlurStyle: UIBlurEffect.Style.regular,
                         backgroundColor: UIColor.white.withAlphaComponent(0.1),
-                        title: ShieldConfiguration.Label(text: "Habitlab", color: .black),
+                        title: ShieldConfiguration.Label(text: "🤡", color: .black),
                         subtitle: ShieldConfiguration.Label(
-                            text: "Stop",
+                            text: "Enough with the Unproductivity! Go Do something Better!",
                             color: .black
                         ),
                         secondaryButtonLabel: nil
