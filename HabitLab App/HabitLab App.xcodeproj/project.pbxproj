@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		85E98C0B2A2FC6FF0024AE92 /* HabitLab_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E98C0A2A2FC6FF0024AE92 /* HabitLab_AppApp.swift */; };
+		85E98C0D2A2FC6FF0024AE92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E98C0C2A2FC6FF0024AE92 /* ContentView.swift */; };
+		85E98C0F2A2FC7010024AE92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E98C0E2A2FC7010024AE92 /* Assets.xcassets */; };
+		85E98C122A2FC7010024AE92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E98C112A2FC7010024AE92 /* Preview Assets.xcassets */; };
+		85E98C1C2A2FC7010024AE92 /* HabitLab_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E98C1B2A2FC7010024AE92 /* HabitLab_AppTests.swift */; };
+		85E98C262A2FC7010024AE92 /* HabitLab_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E98C252A2FC7010024AE92 /* HabitLab_AppUITests.swift */; };
+		85E98C282A2FC7010024AE92 /* HabitLab_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E98C272A2FC7010024AE92 /* HabitLab_AppUITestsLaunchTests.swift */; };
+		85E98C352A2FC7600024AE92 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E98C342A2FC7600024AE92 /* MyModel.swift */; };
+		85E98C512A2FCA8B0024AE92 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E98C3C2A2FC7D80024AE92 /* ManagedSettings.framework */; };
+		85E98C522A2FCA8B0024AE92 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E98C3E2A2FC7D80024AE92 /* ManagedSettingsUI.framework */; };
+		85E98C552A2FCA8B0024AE92 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E98C542A2FCA8B0024AE92 /* ShieldConfigurationExtension.swift */; };
+		85E98C5A2A2FCA8B0024AE92 /* HabitLab Overlay.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 85E98C502A2FCA8B0024AE92 /* HabitLab Overlay.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		85E98C182A2FC7010024AE92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85E98BFF2A2FC6FF0024AE92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85E98C062A2FC6FF0024AE92;
+			remoteInfo = "HabitLab App";
+		};
+		85E98C222A2FC7010024AE92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85E98BFF2A2FC6FF0024AE92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85E98C062A2FC6FF0024AE92;
+			remoteInfo = "HabitLab App";
+		};
+		85E98C582A2FCA8B0024AE92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85E98BFF2A2FC6FF0024AE92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85E98C4F2A2FCA8B0024AE92;
+			remoteInfo = "HabitLab Overlay";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		85E98C4B2A2FC7D80024AE92 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				85E98C5A2A2FCA8B0024AE92 /* HabitLab Overlay.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		85E98C072A2FC6FF0024AE92 /* HabitLab App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HabitLab App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85E98C0A2A2FC6FF0024AE92 /* HabitLab_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitLab_AppApp.swift; sourceTree = "<group>"; };
+		85E98C0C2A2FC6FF0024AE92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		85E98C0E2A2FC7010024AE92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85E98C112A2FC7010024AE92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		85E98C172A2FC7010024AE92 /* HabitLab AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HabitLab AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85E98C1B2A2FC7010024AE92 /* HabitLab_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitLab_AppTests.swift; sourceTree = "<group>"; };
+		85E98C212A2FC7010024AE92 /* HabitLab AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HabitLab AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85E98C252A2FC7010024AE92 /* HabitLab_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitLab_AppUITests.swift; sourceTree = "<group>"; };
+		85E98C272A2FC7010024AE92 /* HabitLab_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitLab_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		85E98C342A2FC7600024AE92 /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
+		85E98C3C2A2FC7D80024AE92 /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
+		85E98C3E2A2FC7D80024AE92 /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = System/Library/Frameworks/ManagedSettingsUI.framework; sourceTree = SDKROOT; };
+		85E98C502A2FCA8B0024AE92 /* HabitLab Overlay.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HabitLab Overlay.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85E98C542A2FCA8B0024AE92 /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
+		85E98C562A2FCA8B0024AE92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E98C572A2FCA8B0024AE92 /* HabitLab_Overlay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HabitLab_Overlay.entitlements; sourceTree = "<group>"; };
+		85E98C5E2A2FCAA70024AE92 /* HabitLab App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HabitLab App.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85E98C042A2FC6FF0024AE92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85E98C142A2FC7010024AE92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85E98C1E2A2FC7010024AE92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85E98C4D2A2FCA8B0024AE92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E98C512A2FCA8B0024AE92 /* ManagedSettings.framework in Frameworks */,
+				85E98C522A2FCA8B0024AE92 /* ManagedSettingsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85E98BFE2A2FC6FF0024AE92 = {
+			isa = PBXGroup;
+			children = (
+				85E98C092A2FC6FF0024AE92 /* HabitLab App */,
+				85E98C1A2A2FC7010024AE92 /* HabitLab AppTests */,
+				85E98C242A2FC7010024AE92 /* HabitLab AppUITests */,
+				85E98C532A2FCA8B0024AE92 /* HabitLab Overlay */,
+				85E98C3B2A2FC7D80024AE92 /* Frameworks */,
+				85E98C082A2FC6FF0024AE92 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		85E98C082A2FC6FF0024AE92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85E98C072A2FC6FF0024AE92 /* HabitLab App.app */,
+				85E98C172A2FC7010024AE92 /* HabitLab AppTests.xctest */,
+				85E98C212A2FC7010024AE92 /* HabitLab AppUITests.xctest */,
+				85E98C502A2FCA8B0024AE92 /* HabitLab Overlay.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85E98C092A2FC6FF0024AE92 /* HabitLab App */ = {
+			isa = PBXGroup;
+			children = (
+				85E98C5E2A2FCAA70024AE92 /* HabitLab App.entitlements */,
+				85E98C0A2A2FC6FF0024AE92 /* HabitLab_AppApp.swift */,
+				85E98C0C2A2FC6FF0024AE92 /* ContentView.swift */,
+				85E98C0E2A2FC7010024AE92 /* Assets.xcassets */,
+				85E98C102A2FC7010024AE92 /* Preview Content */,
+				85E98C342A2FC7600024AE92 /* MyModel.swift */,
+			);
+			path = "HabitLab App";
+			sourceTree = "<group>";
+		};
+		85E98C102A2FC7010024AE92 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				85E98C112A2FC7010024AE92 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		85E98C1A2A2FC7010024AE92 /* HabitLab AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				85E98C1B2A2FC7010024AE92 /* HabitLab_AppTests.swift */,
+			);
+			path = "HabitLab AppTests";
+			sourceTree = "<group>";
+		};
+		85E98C242A2FC7010024AE92 /* HabitLab AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				85E98C252A2FC7010024AE92 /* HabitLab_AppUITests.swift */,
+				85E98C272A2FC7010024AE92 /* HabitLab_AppUITestsLaunchTests.swift */,
+			);
+			path = "HabitLab AppUITests";
+			sourceTree = "<group>";
+		};
+		85E98C3B2A2FC7D80024AE92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85E98C3C2A2FC7D80024AE92 /* ManagedSettings.framework */,
+				85E98C3E2A2FC7D80024AE92 /* ManagedSettingsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85E98C532A2FCA8B0024AE92 /* HabitLab Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				85E98C542A2FCA8B0024AE92 /* ShieldConfigurationExtension.swift */,
+				85E98C562A2FCA8B0024AE92 /* Info.plist */,
+				85E98C572A2FCA8B0024AE92 /* HabitLab_Overlay.entitlements */,
+			);
+			path = "HabitLab Overlay";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85E98C062A2FC6FF0024AE92 /* HabitLab App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85E98C2B2A2FC7010024AE92 /* Build configuration list for PBXNativeTarget "HabitLab App" */;
+			buildPhases = (
+				85E98C032A2FC6FF0024AE92 /* Sources */,
+				85E98C042A2FC6FF0024AE92 /* Frameworks */,
+				85E98C052A2FC6FF0024AE92 /* Resources */,
+				85E98C4B2A2FC7D80024AE92 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85E98C592A2FCA8B0024AE92 /* PBXTargetDependency */,
+			);
+			name = "HabitLab App";
+			productName = "HabitLab App";
+			productReference = 85E98C072A2FC6FF0024AE92 /* HabitLab App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		85E98C162A2FC7010024AE92 /* HabitLab AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85E98C2E2A2FC7010024AE92 /* Build configuration list for PBXNativeTarget "HabitLab AppTests" */;
+			buildPhases = (
+				85E98C132A2FC7010024AE92 /* Sources */,
+				85E98C142A2FC7010024AE92 /* Frameworks */,
+				85E98C152A2FC7010024AE92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85E98C192A2FC7010024AE92 /* PBXTargetDependency */,
+			);
+			name = "HabitLab AppTests";
+			productName = "HabitLab AppTests";
+			productReference = 85E98C172A2FC7010024AE92 /* HabitLab AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		85E98C202A2FC7010024AE92 /* HabitLab AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85E98C312A2FC7010024AE92 /* Build configuration list for PBXNativeTarget "HabitLab AppUITests" */;
+			buildPhases = (
+				85E98C1D2A2FC7010024AE92 /* Sources */,
+				85E98C1E2A2FC7010024AE92 /* Frameworks */,
+				85E98C1F2A2FC7010024AE92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85E98C232A2FC7010024AE92 /* PBXTargetDependency */,
+			);
+			name = "HabitLab AppUITests";
+			productName = "HabitLab AppUITests";
+			productReference = 85E98C212A2FC7010024AE92 /* HabitLab AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		85E98C4F2A2FCA8B0024AE92 /* HabitLab Overlay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85E98C5B2A2FCA8B0024AE92 /* Build configuration list for PBXNativeTarget "HabitLab Overlay" */;
+			buildPhases = (
+				85E98C4C2A2FCA8B0024AE92 /* Sources */,
+				85E98C4D2A2FCA8B0024AE92 /* Frameworks */,
+				85E98C4E2A2FCA8B0024AE92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HabitLab Overlay";
+			productName = "HabitLab Overlay";
+			productReference = 85E98C502A2FCA8B0024AE92 /* HabitLab Overlay.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85E98BFF2A2FC6FF0024AE92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					85E98C062A2FC6FF0024AE92 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					85E98C162A2FC7010024AE92 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 85E98C062A2FC6FF0024AE92;
+					};
+					85E98C202A2FC7010024AE92 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 85E98C062A2FC6FF0024AE92;
+					};
+					85E98C4F2A2FCA8B0024AE92 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 85E98C022A2FC6FF0024AE92 /* Build configuration list for PBXProject "HabitLab App" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85E98BFE2A2FC6FF0024AE92;
+			productRefGroup = 85E98C082A2FC6FF0024AE92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85E98C062A2FC6FF0024AE92 /* HabitLab App */,
+				85E98C162A2FC7010024AE92 /* HabitLab AppTests */,
+				85E98C202A2FC7010024AE92 /* HabitLab AppUITests */,
+				85E98C4F2A2FCA8B0024AE92 /* HabitLab Overlay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85E98C052A2FC6FF0024AE92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E98C122A2FC7010024AE92 /* Preview Assets.xcassets in Resources */,
+				85E98C0F2A2FC7010024AE92 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85E98C152A2FC7010024AE92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85E98C1F2A2FC7010024AE92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85E98C4E2A2FCA8B0024AE92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85E98C032A2FC6FF0024AE92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E98C0D2A2FC6FF0024AE92 /* ContentView.swift in Sources */,
+				85E98C352A2FC7600024AE92 /* MyModel.swift in Sources */,
+				85E98C0B2A2FC6FF0024AE92 /* HabitLab_AppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85E98C132A2FC7010024AE92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E98C1C2A2FC7010024AE92 /* HabitLab_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85E98C1D2A2FC7010024AE92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E98C262A2FC7010024AE92 /* HabitLab_AppUITests.swift in Sources */,
+				85E98C282A2FC7010024AE92 /* HabitLab_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85E98C4C2A2FCA8B0024AE92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E98C552A2FCA8B0024AE92 /* ShieldConfigurationExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		85E98C192A2FC7010024AE92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85E98C062A2FC6FF0024AE92 /* HabitLab App */;
+			targetProxy = 85E98C182A2FC7010024AE92 /* PBXContainerItemProxy */;
+		};
+		85E98C232A2FC7010024AE92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85E98C062A2FC6FF0024AE92 /* HabitLab App */;
+			targetProxy = 85E98C222A2FC7010024AE92 /* PBXContainerItemProxy */;
+		};
+		85E98C592A2FCA8B0024AE92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85E98C4F2A2FCA8B0024AE92 /* HabitLab Overlay */;
+			targetProxy = 85E98C582A2FCA8B0024AE92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		85E98C292A2FC7010024AE92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		85E98C2A2A2FC7010024AE92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85E98C2C2A2FC7010024AE92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HabitLab App/HabitLab App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HabitLab App/Preview Content\"";
+				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85E98C2D2A2FC7010024AE92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HabitLab App/HabitLab App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HabitLab App/Preview Content\"";
+				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		85E98C2F2A2FC7010024AE92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HabitLab App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HabitLab App";
+			};
+			name = Debug;
+		};
+		85E98C302A2FC7010024AE92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HabitLab App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HabitLab App";
+			};
+			name = Release;
+		};
+		85E98C322A2FC7010024AE92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "HabitLab App";
+			};
+			name = Debug;
+		};
+		85E98C332A2FC7010024AE92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "HabitLab App";
+			};
+			name = Release;
+		};
+		85E98C5C2A2FCA8B0024AE92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "HabitLab Overlay/HabitLab_Overlay.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HabitLab Overlay/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "HabitLab Overlay";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-App.HabitLab-Overlay";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85E98C5D2A2FCA8B0024AE92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "HabitLab Overlay/HabitLab_Overlay.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HabitLab Overlay/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "HabitLab Overlay";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-App.HabitLab-Overlay";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85E98C022A2FC6FF0024AE92 /* Build configuration list for PBXProject "HabitLab App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85E98C292A2FC7010024AE92 /* Debug */,
+				85E98C2A2A2FC7010024AE92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85E98C2B2A2FC7010024AE92 /* Build configuration list for PBXNativeTarget "HabitLab App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85E98C2C2A2FC7010024AE92 /* Debug */,
+				85E98C2D2A2FC7010024AE92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85E98C2E2A2FC7010024AE92 /* Build configuration list for PBXNativeTarget "HabitLab AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85E98C2F2A2FC7010024AE92 /* Debug */,
+				85E98C302A2FC7010024AE92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85E98C312A2FC7010024AE92 /* Build configuration list for PBXNativeTarget "HabitLab AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85E98C322A2FC7010024AE92 /* Debug */,
+				85E98C332A2FC7010024AE92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85E98C5B2A2FCA8B0024AE92 /* Build configuration list for PBXNativeTarget "HabitLab Overlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85E98C5C2A2FCA8B0024AE92 /* Debug */,
+				85E98C5D2A2FCA8B0024AE92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85E98BFF2A2FC6FF0024AE92 /* Project object */;
+}
