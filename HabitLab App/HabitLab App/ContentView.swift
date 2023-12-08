@@ -34,6 +34,9 @@ struct ContentView: View {
             }
             .buttonStyle(.bordered)
             .familyActivityPicker(isPresented: $isDiscouragedPresented, selection: $model.selectionToDiscourage)
+            .onSubmit {
+                print("test 1");
+            }
         }
         .onChange(of: model.selectionToDiscourage) { newSelection in
             MyModel.shared.setShieldRestrictions()
