@@ -22,7 +22,7 @@ struct ExampleView: View {
 
 struct ContentView: View {
     @State private var isDiscouragedPresented = false
-    
+    @State private var date = Date()
     @EnvironmentObject var model: MyModel
     
     var body: some View {
@@ -39,7 +39,7 @@ struct ContentView: View {
             }
         }
         .onChange(of: model.selectionToDiscourage) { newSelection in
-            MyModel.shared.setShieldRestrictions()
+            //MyModel.shared.setShieldRestrictions()
         }.onAppear{
             Task{
                 do{
@@ -48,6 +48,14 @@ struct ContentView: View {
                     print ("Failed to enroll for FamilyControl .\(error)" )
                 }
             }
+        }
+        DatePicker(
+               "Time",
+               selection: $date,
+               displayedComponents: [.hourAndMinute]
+           )
+        Button(action: MyModel.shared.turnOffShieldRestrictions) {
+            Text("Turn off all restrictions")
         }
         ExampleView()
             .environmentObject(model)
