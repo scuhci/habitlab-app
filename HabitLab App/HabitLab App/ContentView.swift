@@ -34,13 +34,11 @@ struct ContentView: View {
             }
             .buttonStyle(.bordered)
             .familyActivityPicker(isPresented: $isDiscouragedPresented, selection: $model.selectionToDiscourage)
-            .onSubmit {
-                print("test 1");
-            }
         }
         .onChange(of: model.selectionToDiscourage) { newSelection in
-            //MyModel.shared.setShieldRestrictions()
-        }.onAppear{
+                    MyModel.shared.setShieldRestrictions()
+                }
+        .onAppear{
             Task{
                 do{
                     try await center.requestAuthorization(for: .individual)
@@ -54,8 +52,8 @@ struct ContentView: View {
                selection: $date,
                displayedComponents: [.hourAndMinute]
            )
-        Button(action: MyModel.shared.turnOffShieldRestrictions) {
-            Text("Turn off all restrictions")
+        Button(action: MyModel.shared.setSchedule) {
+            Text("Turn on restrictions")
         }
         ExampleView()
             .environmentObject(model)

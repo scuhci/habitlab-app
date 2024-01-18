@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		857259D12B23E0E400B0CC21 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8577D4BD2B23B04300286C14 /* DeviceActivityMonitorExtension.swift */; };
+		857259D42B23E40500B0CC21 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E98C342A2FC7600024AE92 /* MyModel.swift */; };
 		8577D4A32B23820A00286C14 /* MySchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8577D4A22B23820A00286C14 /* MySchedule.swift */; };
-		8577D4AA2B239C9A00286C14 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8577D4A92B239C9A00286C14 /* DeviceActivity.framework */; };
-		8577D4B22B239C9A00286C14 /* MyDeviceActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8577D4A82B239C9A00286C14 /* MyDeviceActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8577D4BB2B23B04300286C14 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8577D4A92B239C9A00286C14 /* DeviceActivity.framework */; };
 		8577D4BE2B23B04300286C14 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8577D4BD2B23B04300286C14 /* DeviceActivityMonitorExtension.swift */; };
 		8577D4C32B23B04300286C14 /* DeviceActivityMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8577D4BA2B23B04300286C14 /* DeviceActivityMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -28,13 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8577D4B02B239C9A00286C14 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 85E98BFF2A2FC6FF0024AE92 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8577D4A72B239C9900286C14;
-			remoteInfo = MyDeviceActivity;
-		};
 		8577D4C12B23B04300286C14 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 85E98BFF2A2FC6FF0024AE92 /* Project object */;
@@ -73,7 +66,6 @@
 			dstSubfolderSpec = 13;
 			files = (
 				85E98C5A2A2FCA8B0024AE92 /* HabitLab Overlay.appex in Embed Foundation Extensions */,
-				8577D4B22B239C9A00286C14 /* MyDeviceActivity.appex in Embed Foundation Extensions */,
 				8577D4C32B23B04300286C14 /* DeviceActivityMonitor.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -83,7 +75,6 @@
 
 /* Begin PBXFileReference section */
 		8577D4A22B23820A00286C14 /* MySchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySchedule.swift; sourceTree = "<group>"; };
-		8577D4A82B239C9A00286C14 /* MyDeviceActivity.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyDeviceActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8577D4A92B239C9A00286C14 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
 		8577D4BA2B23B04300286C14 /* DeviceActivityMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceActivityMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8577D4BD2B23B04300286C14 /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
@@ -110,14 +101,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8577D4A52B239C9900286C14 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8577D4AA2B239C9A00286C14 /* DeviceActivity.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8577D4B72B23B04300286C14 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -189,7 +172,6 @@
 				85E98C172A2FC7010024AE92 /* HabitLab AppTests.xctest */,
 				85E98C212A2FC7010024AE92 /* HabitLab AppUITests.xctest */,
 				85E98C502A2FCA8B0024AE92 /* HabitLab Overlay.appex */,
-				8577D4A82B239C9A00286C14 /* MyDeviceActivity.appex */,
 				8577D4BA2B23B04300286C14 /* DeviceActivityMonitor.appex */,
 			);
 			name = Products;
@@ -257,23 +239,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8577D4A72B239C9900286C14 /* MyDeviceActivity */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8577D4B32B239C9A00286C14 /* Build configuration list for PBXNativeTarget "MyDeviceActivity" */;
-			buildPhases = (
-				8577D4A42B239C9900286C14 /* Sources */,
-				8577D4A52B239C9900286C14 /* Frameworks */,
-				8577D4A62B239C9900286C14 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MyDeviceActivity;
-			productName = MyDeviceActivity;
-			productReference = 8577D4A82B239C9A00286C14 /* MyDeviceActivity.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		8577D4B92B23B04300286C14 /* DeviceActivityMonitor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8577D4C42B23B04300286C14 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitor" */;
@@ -304,7 +269,6 @@
 			);
 			dependencies = (
 				85E98C592A2FCA8B0024AE92 /* PBXTargetDependency */,
-				8577D4B12B239C9A00286C14 /* PBXTargetDependency */,
 				8577D4C22B23B04300286C14 /* PBXTargetDependency */,
 			);
 			name = "HabitLab App";
@@ -375,9 +339,6 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					8577D4A72B239C9900286C14 = {
-						CreatedOnToolsVersion = 15.0;
-					};
 					8577D4B92B23B04300286C14 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -414,20 +375,12 @@
 				85E98C162A2FC7010024AE92 /* HabitLab AppTests */,
 				85E98C202A2FC7010024AE92 /* HabitLab AppUITests */,
 				85E98C4F2A2FCA8B0024AE92 /* HabitLab Overlay */,
-				8577D4A72B239C9900286C14 /* MyDeviceActivity */,
 				8577D4B92B23B04300286C14 /* DeviceActivityMonitor */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8577D4A62B239C9900286C14 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8577D4B82B23B04300286C14 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -468,18 +421,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8577D4A42B239C9900286C14 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8577D4B62B23B04300286C14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8577D4BE2B23B04300286C14 /* DeviceActivityMonitorExtension.swift in Sources */,
+				857259D42B23E40500B0CC21 /* MyModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +436,7 @@
 			files = (
 				85E98C0D2A2FC6FF0024AE92 /* ContentView.swift in Sources */,
 				85E98C352A2FC7600024AE92 /* MyModel.swift in Sources */,
+				857259D12B23E0E400B0CC21 /* DeviceActivityMonitorExtension.swift in Sources */,
 				8577D4A32B23820A00286C14 /* MySchedule.swift in Sources */,
 				85E98C0B2A2FC6FF0024AE92 /* HabitLab_AppApp.swift in Sources */,
 			);
@@ -522,11 +470,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8577D4B12B239C9A00286C14 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8577D4A72B239C9900286C14 /* MyDeviceActivity */;
-			targetProxy = 8577D4B02B239C9A00286C14 /* PBXContainerItemProxy */;
-		};
 		8577D4C22B23B04300286C14 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8577D4B92B23B04300286C14 /* DeviceActivityMonitor */;
@@ -550,71 +493,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		8577D4B42B239C9A00286C14 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CODE_SIGN_ENTITLEMENTS = MyDeviceActivity/MyDeviceActivity.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PL3M87HFJ2;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyDeviceActivity/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MyDeviceActivity;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-App.MyDeviceActivity";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		8577D4B52B239C9A00286C14 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CODE_SIGN_ENTITLEMENTS = MyDeviceActivity/MyDeviceActivity.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PL3M87HFJ2;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyDeviceActivity/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MyDeviceActivity;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-App.MyDeviceActivity";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		8577D4C52B23B04300286C14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -991,15 +869,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8577D4B32B239C9A00286C14 /* Build configuration list for PBXNativeTarget "MyDeviceActivity" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8577D4B42B239C9A00286C14 /* Debug */,
-				8577D4B52B239C9A00286C14 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8577D4C42B23B04300286C14 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
