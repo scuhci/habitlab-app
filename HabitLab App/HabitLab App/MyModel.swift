@@ -34,6 +34,8 @@ class MyModel: ObservableObject {
     // Import ManagedSettings to get access to the application shield restriction
     var shieldSettings = ShieldConfiguration(title: ShieldConfiguration.Label(text: "Habitlab", color: UIColor.blue))
     @Published var selectionToDiscourage: FamilyActivitySelection
+    @State var hours: Int = 0
+    @State var minutes: Int = 0
     
     init() {
         selectionToDiscourage = FamilyActivitySelection()
@@ -65,6 +67,7 @@ class MyModel: ObservableObject {
             repeats: true
         )
         print("Setting schedule...")
+        print($hours)
         let events: [DeviceActivityEvent.Name: DeviceActivityEvent] = [
             .discouraged: DeviceActivityEvent(
                 applications: MyModel.shared.selectionToDiscourage.applicationTokens,

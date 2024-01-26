@@ -34,14 +34,23 @@ struct ContentView: View {
             }
             .buttonStyle(.bordered)
             .familyActivityPicker(isPresented: $isDiscouragedPresented, selection: $model.selectionToDiscourage)
-            DatePicker(
-                   "Time",
-                   selection: $date,
-                   displayedComponents: [.hourAndMinute]
-               ).onChange(of: date, perform: { value in
-                  print("Time Limit Set To:",  value)
-              });
-        }
+            List{
+                HStack{
+                    Picker("", selection: $model.hours){
+                        ForEach(0..<24, id: \.self) { i in
+                            Text("\(i)").tag(i)
+                        }
+                    }.pickerStyle(WheelPickerStyle())
+                    Text("hours")
+                    Picker("", selection: $model.minutes){
+                        ForEach(0..<60, id: \.self) { i in
+                            Text("\(i)").tag(i)
+                        }
+                    }.pickerStyle(WheelPickerStyle())
+                    Text("min")
+                }.padding(.horizontal)
+            }
+            }
         .onChange(of: model.selectionToDiscourage) { newSelection in
                     MyModel.shared.setShieldRestrictions()
                 }

@@ -32,7 +32,7 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
     
         // Handle the event reaching its threshold.
         let model = MyModel()
-        //œmodel.setShieldRestrictions()
+        model.setShieldRestrictions()
 
     }
     
