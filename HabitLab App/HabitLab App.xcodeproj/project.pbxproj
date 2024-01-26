@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		857259D12B23E0E400B0CC21 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8577D4BD2B23B04300286C14 /* DeviceActivityMonitorExtension.swift */; };
 		857259D42B23E40500B0CC21 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E98C342A2FC7600024AE92 /* MyModel.swift */; };
-		8577D4A32B23820A00286C14 /* MySchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8577D4A22B23820A00286C14 /* MySchedule.swift */; };
 		8577D4BB2B23B04300286C14 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8577D4A92B239C9A00286C14 /* DeviceActivity.framework */; };
 		8577D4BE2B23B04300286C14 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8577D4BD2B23B04300286C14 /* DeviceActivityMonitorExtension.swift */; };
 		8577D4C32B23B04300286C14 /* DeviceActivityMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8577D4BA2B23B04300286C14 /* DeviceActivityMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -74,7 +73,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8577D4A22B23820A00286C14 /* MySchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySchedule.swift; sourceTree = "<group>"; };
 		8577D4A92B239C9A00286C14 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
 		8577D4BA2B23B04300286C14 /* DeviceActivityMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceActivityMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8577D4BD2B23B04300286C14 /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 				85E98C5E2A2FCAA70024AE92 /* HabitLab App.entitlements */,
 				85E98C0A2A2FC6FF0024AE92 /* HabitLab_AppApp.swift */,
 				85E98C0C2A2FC6FF0024AE92 /* ContentView.swift */,
-				8577D4A22B23820A00286C14 /* MySchedule.swift */,
 				85E98C0E2A2FC7010024AE92 /* Assets.xcassets */,
 				85E98C102A2FC7010024AE92 /* Preview Content */,
 				85E98C342A2FC7600024AE92 /* MyModel.swift */,
@@ -437,7 +434,6 @@
 				85E98C0D2A2FC6FF0024AE92 /* ContentView.swift in Sources */,
 				85E98C352A2FC7600024AE92 /* MyModel.swift in Sources */,
 				857259D12B23E0E400B0CC21 /* DeviceActivityMonitorExtension.swift in Sources */,
-				8577D4A32B23820A00286C14 /* MySchedule.swift in Sources */,
 				85E98C0B2A2FC6FF0024AE92 /* HabitLab_AppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

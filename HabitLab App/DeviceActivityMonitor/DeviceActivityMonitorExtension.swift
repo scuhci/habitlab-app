@@ -16,7 +16,6 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         super.intervalDidStart(for: activity)
         
         // Handle the start of the interval.
-        print("interval started")
         let limitedStore = ManagedSettingsStore(named: .limited)
         limitedStore.clearAllSettings()
     }
@@ -32,9 +31,8 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         super.eventDidReachThreshold(event, activity: activity)
     
         // Handle the event reaching its threshold.
-        print("Threshold reached")
         let model = MyModel()
-        model.setShieldRestrictions()
+        //œmodel.setShieldRestrictions()
 
     }
     

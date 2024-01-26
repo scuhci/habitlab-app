@@ -34,6 +34,13 @@ struct ContentView: View {
             }
             .buttonStyle(.bordered)
             .familyActivityPicker(isPresented: $isDiscouragedPresented, selection: $model.selectionToDiscourage)
+            DatePicker(
+                   "Time",
+                   selection: $date,
+                   displayedComponents: [.hourAndMinute]
+               ).onChange(of: date, perform: { value in
+                  print("Time Limit Set To:",  value)
+              });
         }
         .onChange(of: model.selectionToDiscourage) { newSelection in
                     MyModel.shared.setShieldRestrictions()
@@ -46,14 +53,6 @@ struct ContentView: View {
                     print ("Failed to enroll for FamilyControl .\(error)" )
                 }
             }
-        }
-        DatePicker(
-               "Time",
-               selection: $date,
-               displayedComponents: [.hourAndMinute]
-           )
-        Button(action: MyModel.shared.setSchedule) {
-            Text("Turn on restrictions")
         }
         ExampleView()
             .environmentObject(model)
