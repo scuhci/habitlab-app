@@ -27,6 +27,16 @@ extension DeviceActivityEvent.Name {
     static let discouraged = Self("discouraged")
 }
 
+// Scheudle During which the Activity runs
+// This Schedule runs daily
+let schedule = DeviceActivitySchedule(
+    // Set Schedule hours to reset at mudnight
+    intervalStart: DateComponents(hour: 0, minute: 1),
+    intervalEnd: DateComponents(hour: 23, minute: 59),
+    // I've also set the schedule to repeat
+    repeats: true
+)
+
 class MyModel: ObservableObject {
     // Import ManagedSettings to get access to the application shield restriction
     let limitedStore = ManagedSettingsStore(named: .limited)
@@ -34,8 +44,8 @@ class MyModel: ObservableObject {
     // Import ManagedSettings to get access to the application shield restriction
     var shieldSettings = ShieldConfiguration(title: ShieldConfiguration.Label(text: "Habitlab", color: UIColor.blue))
     @Published var selectionToDiscourage: FamilyActivitySelection
-    @State var hours: Int = 0
-    @State var minutes: Int = 0
+    @Published var hours: Int = 0
+    @Published var minutes: Int = 0
     
     init() {
         selectionToDiscourage = FamilyActivitySelection()
@@ -57,21 +67,12 @@ class MyModel: ObservableObject {
     }
 
     func setSchedule() {
-        // Scheudle During which the Activity runs
-        // This Schedule runs daily
-        let schedule = DeviceActivitySchedule(
-            // Set Schedule hours to reset at mudnight
-            intervalStart: DateComponents(hour: 0, minute: 1),
-            intervalEnd: DateComponents(hour: 23, minute: 59),
-            // I've also set the schedule to repeat
-            repeats: true
-        )
         print("Setting schedule...")
-        print($hours)
+        print(minutes)
         let events: [DeviceActivityEvent.Name: DeviceActivityEvent] = [
             .discouraged: DeviceActivityEvent(
                 applications: MyModel.shared.selectionToDiscourage.applicationTokens,
-                threshold: DateComponents(second: 10)
+                threshold: DateComponents(hour:hours, minute: minutes)
             )
         ]
         

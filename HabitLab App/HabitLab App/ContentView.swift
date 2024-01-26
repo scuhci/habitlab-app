@@ -62,6 +62,7 @@ struct ContentView: View {
                     print ("Failed to enroll for FamilyControl .\(error)" )
                 }
             }
+            model.setSchedule()
         }
         ExampleView()
             .environmentObject(model)
