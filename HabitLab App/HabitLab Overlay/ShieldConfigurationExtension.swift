@@ -31,12 +31,10 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
         // Customize the shield as needed for applications shielded because of their category.
         return ShieldConfiguration(
             backgroundBlurStyle: UIBlurEffect.Style.regular,
-                        backgroundColor: UIColor.white.withAlphaComponent(0.1),
-                        title: ShieldConfiguration.Label(text: "🤡", color: .black),
-                        subtitle: ShieldConfiguration.Label(
-                            text: "Enough with the Unproductivity! Go Do something Better!",
-                            color: .black
-                        ),
+                        backgroundColor: UIColor.white.withAlphaComponent(0.5),
+                        icon: UIImage(named: "hour-glass"),
+                        title: ShieldConfiguration.Label(text: "Time Limit", color: .black),
+                        subtitle: ShieldConfiguration.Label(text: "You're done here, loser", color: .black),
                         secondaryButtonLabel: nil
                     )
     }

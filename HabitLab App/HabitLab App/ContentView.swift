@@ -27,14 +27,17 @@ struct ContentView: View {
     
     var body: some View {
         let center = AuthorizationCenter.shared
-        VStack {
-            Text("Setlect apps to set a daily limit")
-            Button("Add limit") {
-                isDiscouragedPresented = true
-            }
-            .buttonStyle(.bordered)
-            .familyActivityPicker(isPresented: $isDiscouragedPresented, selection: $model.selectionToDiscourage)
-            List{
+            VStack(alignment: .leading) {
+                Text("Set daily llimits for app categories you want to manage on your devices\nLimits reset at midnight")
+                    .font(.footnote)
+                Button("Add limit") {
+                    isDiscouragedPresented = true
+                }
+                .buttonStyle(.bordered)
+                .familyActivityPicker(isPresented: $isDiscouragedPresented, selection: $model.selectionToDiscourage)
+                Spacer()
+                    .frame(height: 50)
+                Text("Set daily time limit")
                 HStack{
                     Picker("", selection: $model.hours){
                         ForEach(0..<24, id: \.self) { i in
@@ -48,12 +51,15 @@ struct ContentView: View {
                         }
                     }.pickerStyle(WheelPickerStyle())
                     Text("min")
-                }.padding(.horizontal)
-            }
-            }
-        .onChange(of: model.selectionToDiscourage) { newSelection in
-                    MyModel.shared.setShieldRestrictions()
                 }
+                .padding(.horizontal)
+                Spacer()
+            }
+            .padding(.horizontal)
+            .onChange(of: model.selectionToDiscourage) { newSelection in
+                //MySchedule.setSchedule()
+                model.setShieldRestrictions()
+            }
         .onAppear{
             Task{
                 do{
@@ -62,7 +68,6 @@ struct ContentView: View {
                     print ("Failed to enroll for FamilyControl .\(error)" )
                 }
             }
-            model.setSchedule()
         }
         ExampleView()
             .environmentObject(model)
