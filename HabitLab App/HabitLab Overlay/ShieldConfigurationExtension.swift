@@ -29,7 +29,7 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
     
     override func configuration(shielding application: Application, in category: ActivityCategory) -> ShieldConfiguration {
         // Customize the shield as needed for applications shielded because of their category.
-        print("Sjield cofig extension")
+        print("Shield cofig extension")
         return ShieldConfiguration(
             backgroundBlurStyle: UIBlurEffect.Style.regular,
                         backgroundColor: UIColor.white.withAlphaComponent(0.5),

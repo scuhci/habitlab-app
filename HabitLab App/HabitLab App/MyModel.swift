@@ -38,7 +38,7 @@ class MyModel: ObservableObject {
     let limitedStore = ManagedSettingsStore(named: .limited)
     
     // Import ManagedSettings to get access to the application shield restriction
-    var shieldSettings = ShieldConfiguration(title: ShieldConfiguration.Label(text: "Habitlab", color: UIColor.blue))
+    var shieldSettings = ShieldConfiguration(title: ShieldConfiguration.Label(text: "Habitlab", color: UIColor.blue));
     @Published var selectionToDiscourage: FamilyActivitySelection
     @Published var hours: Int = 0
     @Published var minutes: Int = 0
@@ -53,6 +53,7 @@ class MyModel: ObservableObject {
     
     //Called when familyActivityPicker selections change
     func setShieldRestrictions() {
+        print("Setting restriction..")
         // Pull the selection out of the app's model and configure the application shield restriction accordingly
         let applications = MyModel.shared.selectionToDiscourage
         limitedStore.shield.applications = applications.applicationTokens.isEmpty ? nil : applications.applicationTokens
@@ -66,9 +67,21 @@ class MyModel: ObservableObject {
         let events: [DeviceActivityEvent.Name: DeviceActivityEvent] = [
             .discouraged: DeviceActivityEvent(
                 applications: MyModel.shared.selectionToDiscourage.applicationTokens,
-                threshold: DateComponents(hour:0, minute:1)
+                categories: MyModel.shared.selectionToDiscourage.categoryTokens,
+                threshold: DateComponents(second:1)
             )
         ]
+        let encoder = JSONEncoder()
+          do {
+            let data = try encoder.encode(MyModel.shared.selectionToDiscourage.categoryTokens)
+            let jsonString = String(data: data, encoding: .utf8)!
+            let sharedUserDefaults = UserDefaults(suiteName: "group.com.name.habitlab")
+            sharedUserDefaults?.set(jsonString, forKey: "selectedAppCategories")
+            sharedUserDefaults?.synchronize()
+            print("Tokens encoded")
+          } catch {
+            print("Error encoding tokens: \(error)")
+          }
         
         // Create a Device Activity center
         let center = DeviceActivityCenter()
