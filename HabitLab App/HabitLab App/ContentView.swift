@@ -27,24 +27,39 @@ struct ContentView: View {
     
     var body: some View {
         let center = AuthorizationCenter.shared
-        VStack {
-            Text("Setlect apps to set a daily limit")
-            Button("Add limit") {
-                isDiscouragedPresented = true
-            }
-            .buttonStyle(.bordered)
-            .familyActivityPicker(isPresented: $isDiscouragedPresented, selection: $model.selectionToDiscourage)
-            DatePicker(
-                   "Time",
-                   selection: $date,
-                   displayedComponents: [.hourAndMinute]
-               ).onChange(of: date, perform: { value in
-                  print("Time Limit Set To:",  value)
-              });
-        }
-        .onChange(of: model.selectionToDiscourage) { newSelection in
-                    MyModel.shared.setShieldRestrictions()
+            VStack(alignment: .leading) {
+                Text("Set daily llimits for app categories you want to manage on your devices\nLimits reset at midnight")
+                    .font(.footnote)
+                Button("Add limit") {
+                    isDiscouragedPresented = true
                 }
+                .buttonStyle(.bordered)
+                .familyActivityPicker(isPresented: $isDiscouragedPresented, selection: $model.selectionToDiscourage)
+                Spacer()
+                    .frame(height: 50)
+                Text("Set daily time limit")
+                HStack{
+                    Picker("", selection: $model.hours){
+                        ForEach(0..<24, id: \.self) { i in
+                            Text("\(i)").tag(i)
+                        }
+                    }.pickerStyle(WheelPickerStyle())
+                    Text("hours")
+                    Picker("", selection: $model.minutes){
+                        ForEach(0..<60, id: \.self) { i in
+                            Text("\(i)").tag(i)
+                        }
+                    }.pickerStyle(WheelPickerStyle())
+                    Text("min")
+                }
+                .padding(.horizontal)
+                Spacer()
+            }
+            .padding(.horizontal)
+            .onChange(of: model.selectionToDiscourage) { newSelection in
+                model.setSchedule();
+                //model.setShieldRestrictions()
+            }
         .onAppear{
             Task{
                 do{

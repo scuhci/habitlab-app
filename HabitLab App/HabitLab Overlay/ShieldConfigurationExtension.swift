@@ -29,14 +29,13 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
     
     override func configuration(shielding application: Application, in category: ActivityCategory) -> ShieldConfiguration {
         // Customize the shield as needed for applications shielded because of their category.
+        print("Shield cofig extension")
         return ShieldConfiguration(
             backgroundBlurStyle: UIBlurEffect.Style.regular,
-                        backgroundColor: UIColor.white.withAlphaComponent(0.1),
-                        title: ShieldConfiguration.Label(text: "🤡", color: .black),
-                        subtitle: ShieldConfiguration.Label(
-                            text: "Enough with the Unproductivity! Go Do something Better!",
-                            color: .black
-                        ),
+                        backgroundColor: UIColor.white.withAlphaComponent(0.5),
+                        icon: UIImage(named: "hour-glass"),
+                        //title: ShieldConfiguration.Label(text: "Time Limit", color: .black),
+                        title: ShieldConfiguration.Label(text: "You're done here, loser", color: .black),
                         secondaryButtonLabel: nil
                     )
     }

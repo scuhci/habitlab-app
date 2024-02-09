@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EF8325B2B68708F0007B752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E98C0E2A2FC7010024AE92 /* Assets.xcassets */; };
 		857259D12B23E0E400B0CC21 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8577D4BD2B23B04300286C14 /* DeviceActivityMonitorExtension.swift */; };
 		857259D42B23E40500B0CC21 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E98C342A2FC7600024AE92 /* MyModel.swift */; };
 		8577D4BB2B23B04300286C14 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8577D4A92B239C9A00286C14 /* DeviceActivity.framework */; };
@@ -334,7 +335,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					8577D4B92B23B04300286C14 = {
 						CreatedOnToolsVersion = 15.0;
@@ -412,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EF8325B2B68708F0007B752 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
