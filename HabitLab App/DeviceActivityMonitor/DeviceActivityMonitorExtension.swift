@@ -18,6 +18,8 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         // Handle the start of the interval.
         let limitedStore = ManagedSettingsStore(named: .limited)
         limitedStore.clearAllSettings()
+        
+        print("In extension")
     }
     
     override func intervalDidEnd(for activity: DeviceActivityName) {
