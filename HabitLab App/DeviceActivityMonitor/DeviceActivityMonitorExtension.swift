@@ -17,7 +17,7 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         
         // Handle the start of the interval.
         let limitedStore = ManagedSettingsStore(named: .limited)
-        limitedStore.clearAllSettings()
+        //limitedStore.clearAllSettings()
     }
     
     override func intervalDidEnd(for activity: DeviceActivityName) {
@@ -33,7 +33,7 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         let categoriesToShield:Set<ActivityCategoryToken>;
         let limitedStore = ManagedSettingsStore(named: .limited)
         let sharedUserDefaults = UserDefaults(suiteName: "group.com.name.habitlab")
-        guard let jsonString = sharedUserDefaults?.string(forKey: "selectedApps") else {return}
+        guard let jsonString = sharedUserDefaults?.string(forKey: "selectedAppCategories") else {return}
         let decoder = JSONDecoder()
         do {
             let data = Data(jsonString.utf8)

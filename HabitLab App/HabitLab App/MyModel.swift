@@ -64,6 +64,9 @@ class MyModel: ObservableObject {
     
     public func setSchedule() {
         print("Setting schedule...")
+        print()
+        print(MyModel.shared.selectionToDiscourage.categoryTokens)
+        print()
         let events: [DeviceActivityEvent.Name: DeviceActivityEvent] = [
             .discouraged: DeviceActivityEvent(
                 applications: MyModel.shared.selectionToDiscourage.applicationTokens,
@@ -82,6 +85,20 @@ class MyModel: ObservableObject {
           } catch {
             print("Error encoding tokens: \(error)")
           }
+        
+        let categoriesToShield:Set<ActivityCategoryToken>;
+        let limitedStore = ManagedSettingsStore(named: .limited)
+        let sharedUserDefaults = UserDefaults(suiteName: "group.com.name.habitlab")
+        guard let jsonString = sharedUserDefaults?.string(forKey: "selectedAppCategories") else {return}
+        let decoder = JSONDecoder()
+        do {
+            let data = Data(jsonString.utf8)
+            categoriesToShield =  try decoder.decode(Set<ActivityCategoryToken>.self, from: data)
+            limitedStore.shield.applicationCategories = .specific(categoriesToShield)
+            print(categoriesToShield)
+        } catch {
+            print("Error decoding tokens: \(error)")
+        }
         
         // Create a Device Activity center
         let center = DeviceActivityCenter()
