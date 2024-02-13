@@ -64,16 +64,11 @@ class MyModel: ObservableObject {
     
     public func setSchedule() {
         print("Setting schedule...")
-        print()
-        print(MyModel.shared.selectionToDiscourage.categoryTokens)
-        print()
-        let events: [DeviceActivityEvent.Name: DeviceActivityEvent] = [
-            .discouraged: DeviceActivityEvent(
+        let event = DeviceActivityEvent(
                 applications: MyModel.shared.selectionToDiscourage.applicationTokens,
                 categories: MyModel.shared.selectionToDiscourage.categoryTokens,
                 threshold: DateComponents(second:1)
             )
-        ]
         let encoder = JSONEncoder()
           do {
             let data = try encoder.encode(MyModel.shared.selectionToDiscourage.categoryTokens)
@@ -86,26 +81,14 @@ class MyModel: ObservableObject {
             print("Error encoding tokens: \(error)")
           }
         
-        let categoriesToShield:Set<ActivityCategoryToken>;
-        let limitedStore = ManagedSettingsStore(named: .limited)
-        let sharedUserDefaults = UserDefaults(suiteName: "group.com.name.habitlab")
-        guard let jsonString = sharedUserDefaults?.string(forKey: "selectedAppCategories") else {return}
-        let decoder = JSONDecoder()
-        do {
-            let data = Data(jsonString.utf8)
-            categoriesToShield =  try decoder.decode(Set<ActivityCategoryToken>.self, from: data)
-            limitedStore.shield.applicationCategories = .specific(categoriesToShield)
-            print(categoriesToShield)
-        } catch {
-            print("Error decoding tokens: \(error)")
-        }
-        
         // Create a Device Activity center
         let center = DeviceActivityCenter()
         do {
             print("Try to start monitoring...")
             // Call startMonitoring with the activity name, schedule, and events
-            try center.startMonitoring(.daily, during: schedule, events: events)
+            try center.startMonitoring(.daily, 
+                                       during: schedule,
+                                       events:[.discouraged: event] )
         } catch {
             print("Error monitoring schedule: ", error)
         }

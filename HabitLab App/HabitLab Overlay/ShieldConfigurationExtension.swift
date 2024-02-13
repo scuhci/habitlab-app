@@ -21,7 +21,7 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
                         icon: UIImage(named: "hour-glass"),
                         //title: ShieldConfiguration.Label(text: "Time Limit", color: .black),
                         title: ShieldConfiguration.Label(text: "You're done here, loser", color: .black),
-                        secondaryButtonLabel: nil
+                        secondaryButtonLabel:  ShieldConfiguration.Label(text: "Ignore Limit", color: .black)
                     )
     }
     
@@ -34,7 +34,7 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
                         icon: UIImage(named: "hour-glass"),
                         //title: ShieldConfiguration.Label(text: "Time Limit", color: .black),
                         title: ShieldConfiguration.Label(text: "You're done here, loser", color: .black),
-                        secondaryButtonLabel: nil
+                        secondaryButtonLabel:  ShieldConfiguration.Label(text: "Ignore Limit", color: .black)
                     )
     }
     
