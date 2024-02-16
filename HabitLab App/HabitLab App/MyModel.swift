@@ -62,6 +62,25 @@ class MyModel: ObservableObject {
         : ShieldSettings.ActivityCategoryPolicy.specific(applications.categoryTokens)
     }
     
+    func storeEncodedData<T: Encodable>(data: T, key: String, suiteName: String? = nil) {
+      do {
+        let encoder = JSONEncoder()
+        let encodedData = try encoder.encode(data)
+        let jsonString = String(data: encodedData, encoding: .utf8)!
+        var userDefaults: UserDefaults!
+        if let suiteName = suiteName {
+          userDefaults = UserDefaults(suiteName: suiteName)
+        } else {
+          userDefaults = UserDefaults.standard
+        }
+        userDefaults.set(jsonString, forKey: key)
+        userDefaults.synchronize()
+        print("Data encoded and stored successfully under key: \(key)")
+      } catch {
+        print("Error encoding and storing data: \(error)")
+      }
+    }
+    
     public func setSchedule() {
         print("Setting schedule...")
         let event = DeviceActivityEvent(
