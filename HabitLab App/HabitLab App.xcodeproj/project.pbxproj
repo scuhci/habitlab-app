@@ -25,6 +25,10 @@
 		85E98C522A2FCA8B0024AE92 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E98C3E2A2FC7D80024AE92 /* ManagedSettingsUI.framework */; };
 		85E98C552A2FCA8B0024AE92 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E98C542A2FCA8B0024AE92 /* ShieldConfigurationExtension.swift */; };
 		85E98C5A2A2FCA8B0024AE92 /* HabitLab Overlay.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 85E98C502A2FCA8B0024AE92 /* HabitLab Overlay.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		98124C072B83F59E00C2146A /* BrowseMyAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98124C062B83F59E00C2146A /* BrowseMyAppView.swift */; };
+		98124C0B2B83F98800C2146A /* SetTimeLimitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98124C0A2B83F98800C2146A /* SetTimeLimitView.swift */; };
+		98124C0D2B83FC8300C2146A /* ReadyInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98124C0C2B83FC8300C2146A /* ReadyInfoView.swift */; };
+		987512E82B83F11B000557F9 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987512E72B83F11B000557F9 /* LandingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +101,10 @@
 		85E98C562A2FCA8B0024AE92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85E98C572A2FCA8B0024AE92 /* HabitLab_Overlay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HabitLab_Overlay.entitlements; sourceTree = "<group>"; };
 		85E98C5E2A2FCAA70024AE92 /* HabitLab App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HabitLab App.entitlements"; sourceTree = "<group>"; };
+		98124C062B83F59E00C2146A /* BrowseMyAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseMyAppView.swift; sourceTree = "<group>"; };
+		98124C0A2B83F98800C2146A /* SetTimeLimitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeLimitView.swift; sourceTree = "<group>"; };
+		98124C0C2B83FC8300C2146A /* ReadyInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyInfoView.swift; sourceTree = "<group>"; };
+		987512E72B83F11B000557F9 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +187,8 @@
 		85E98C092A2FC6FF0024AE92 /* HabitLab App */ = {
 			isa = PBXGroup;
 			children = (
+				987512E52B83F09A000557F9 /* Resources */,
+				987512E42B83F094000557F9 /* Views */,
 				85E98C5E2A2FCAA70024AE92 /* HabitLab App.entitlements */,
 				85E98C0A2A2FC6FF0024AE92 /* HabitLab_AppApp.swift */,
 				85E98C0C2A2FC6FF0024AE92 /* ContentView.swift */,
@@ -232,6 +242,48 @@
 				85E98C572A2FCA8B0024AE92 /* HabitLab_Overlay.entitlements */,
 			);
 			path = "HabitLab Overlay";
+			sourceTree = "<group>";
+		};
+		98124C052B83F51800C2146A /* SettingViews */ = {
+			isa = PBXGroup;
+			children = (
+				98124C062B83F59E00C2146A /* BrowseMyAppView.swift */,
+				98124C0A2B83F98800C2146A /* SetTimeLimitView.swift */,
+				98124C0C2B83FC8300C2146A /* ReadyInfoView.swift */,
+			);
+			path = SettingViews;
+			sourceTree = "<group>";
+		};
+		98124C0E2B8400C100C2146A /* DashboardViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DashboardViews;
+			sourceTree = "<group>";
+		};
+		987512E42B83F094000557F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98124C0E2B8400C100C2146A /* DashboardViews */,
+				98124C052B83F51800C2146A /* SettingViews */,
+				987512E62B83F0F8000557F9 /* Helper */,
+				987512E72B83F11B000557F9 /* LandingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		987512E52B83F09A000557F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		987512E62B83F0F8000557F9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,7 +485,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98124C072B83F59E00C2146A /* BrowseMyAppView.swift in Sources */,
 				85E98C0D2A2FC6FF0024AE92 /* ContentView.swift in Sources */,
+				98124C0D2B83FC8300C2146A /* ReadyInfoView.swift in Sources */,
+				987512E82B83F11B000557F9 /* LandingView.swift in Sources */,
+				98124C0B2B83F98800C2146A /* SetTimeLimitView.swift in Sources */,
 				85E98C352A2FC7600024AE92 /* MyModel.swift in Sources */,
 				857259D12B23E0E400B0CC21 /* DeviceActivityMonitorExtension.swift in Sources */,
 				85E98C0B2A2FC6FF0024AE92 /* HabitLab_AppApp.swift in Sources */,
