@@ -10,6 +10,7 @@ import SwiftUI
 struct SetTimeLimitView: View {
     @State private var hours : Int = 0
     @State private var minutes: Int = 0
+    @State private var timeSelected : Bool = false
     var body: some View {
         VStack {
             Text("Set daily time limit:").font(.headline)
@@ -28,10 +29,14 @@ struct SetTimeLimitView: View {
                 Text("min")
             }.padding((.horizontal))
             Spacer().frame(height: 120.0)
-            Button("Ready!") {}
+            Button("Ready!") {
+                timeSelected = true
+            }
                 .buttonStyle(.borderedProminent)
             
-        }.padding()
+        }.padding().navigationDestination(isPresented: $timeSelected) {
+            ReadyInfoView()
+        }
     }
 }
 
