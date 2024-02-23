@@ -24,7 +24,11 @@
 		85E98C512A2FCA8B0024AE92 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E98C3C2A2FC7D80024AE92 /* ManagedSettings.framework */; };
 		85E98C522A2FCA8B0024AE92 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E98C3E2A2FC7D80024AE92 /* ManagedSettingsUI.framework */; };
 		85E98C552A2FCA8B0024AE92 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E98C542A2FCA8B0024AE92 /* ShieldConfigurationExtension.swift */; };
-		85E98C5A2A2FCA8B0024AE92 /* HabitLab Overlay.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 85E98C502A2FCA8B0024AE92 /* HabitLab Overlay.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		926167D22B882601009C6B05 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E98C3C2A2FC7D80024AE92 /* ManagedSettings.framework */; };
+		926167D32B882601009C6B05 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E98C3E2A2FC7D80024AE92 /* ManagedSettingsUI.framework */; };
+		926167D62B882601009C6B05 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926167D52B882601009C6B05 /* ShieldConfigurationExtension.swift */; };
+		926167DB2B882601009C6B05 /* ShieldConfiguration.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 926167D12B882601009C6B05 /* ShieldConfiguration.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		926167DF2B8826AA009C6B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E98C0E2A2FC7010024AE92 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,23 +53,23 @@
 			remoteGlobalIDString = 85E98C062A2FC6FF0024AE92;
 			remoteInfo = "HabitLab App";
 		};
-		85E98C582A2FCA8B0024AE92 /* PBXContainerItemProxy */ = {
+		926167D92B882601009C6B05 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 85E98BFF2A2FC6FF0024AE92 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 85E98C4F2A2FCA8B0024AE92;
-			remoteInfo = "HabitLab Overlay";
+			remoteGlobalIDString = 926167D02B882601009C6B05;
+			remoteInfo = ShieldConfiguration;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		85E98C4B2A2FC7D80024AE92 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				85E98C5A2A2FCA8B0024AE92 /* HabitLab Overlay.appex in Embed Foundation Extensions */,
+				926167DB2B882601009C6B05 /* ShieldConfiguration.appex in Embed Foundation Extensions */,
 				8577D4C32B23B04300286C14 /* DeviceActivityMonitor.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -97,6 +101,10 @@
 		85E98C562A2FCA8B0024AE92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85E98C572A2FCA8B0024AE92 /* HabitLab_Overlay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HabitLab_Overlay.entitlements; sourceTree = "<group>"; };
 		85E98C5E2A2FCAA70024AE92 /* HabitLab App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HabitLab App.entitlements"; sourceTree = "<group>"; };
+		926167D12B882601009C6B05 /* ShieldConfiguration.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShieldConfiguration.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		926167D52B882601009C6B05 /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
+		926167D72B882601009C6B05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		926167D82B882601009C6B05 /* ShieldConfiguration.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShieldConfiguration.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +146,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		926167CE2B882601009C6B05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926167D22B882601009C6B05 /* ManagedSettings.framework in Frameworks */,
+				926167D32B882601009C6B05 /* ManagedSettingsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -159,6 +176,7 @@
 				85E98C242A2FC7010024AE92 /* HabitLab AppUITests */,
 				85E98C532A2FCA8B0024AE92 /* HabitLab Overlay */,
 				8577D4BC2B23B04300286C14 /* DeviceActivityMonitor */,
+				926167D42B882601009C6B05 /* ShieldConfiguration */,
 				85E98C3B2A2FC7D80024AE92 /* Frameworks */,
 				85E98C082A2FC6FF0024AE92 /* Products */,
 			);
@@ -172,6 +190,7 @@
 				85E98C212A2FC7010024AE92 /* HabitLab AppUITests.xctest */,
 				85E98C502A2FCA8B0024AE92 /* HabitLab Overlay.appex */,
 				8577D4BA2B23B04300286C14 /* DeviceActivityMonitor.appex */,
+				926167D12B882601009C6B05 /* ShieldConfiguration.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,6 +201,7 @@
 				85E98C5E2A2FCAA70024AE92 /* HabitLab App.entitlements */,
 				85E98C0A2A2FC6FF0024AE92 /* HabitLab_AppApp.swift */,
 				85E98C0C2A2FC6FF0024AE92 /* ContentView.swift */,
+				85E98C1B2A2FC7010024AE92 /* HabitLab_AppTests.swift */,
 				85E98C0E2A2FC7010024AE92 /* Assets.xcassets */,
 				85E98C102A2FC7010024AE92 /* Preview Content */,
 				85E98C342A2FC7600024AE92 /* MyModel.swift */,
@@ -200,7 +220,6 @@
 		85E98C1A2A2FC7010024AE92 /* HabitLab AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				85E98C1B2A2FC7010024AE92 /* HabitLab_AppTests.swift */,
 			);
 			path = "HabitLab AppTests";
 			sourceTree = "<group>";
@@ -232,6 +251,16 @@
 				85E98C572A2FCA8B0024AE92 /* HabitLab_Overlay.entitlements */,
 			);
 			path = "HabitLab Overlay";
+			sourceTree = "<group>";
+		};
+		926167D42B882601009C6B05 /* ShieldConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				926167D52B882601009C6B05 /* ShieldConfigurationExtension.swift */,
+				926167D72B882601009C6B05 /* Info.plist */,
+				926167D82B882601009C6B05 /* ShieldConfiguration.entitlements */,
+			);
+			path = ShieldConfiguration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +295,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				85E98C592A2FCA8B0024AE92 /* PBXTargetDependency */,
 				8577D4C22B23B04300286C14 /* PBXTargetDependency */,
+				926167DA2B882601009C6B05 /* PBXTargetDependency */,
 			);
 			name = "HabitLab App";
 			productName = "HabitLab App";
@@ -327,6 +356,23 @@
 			productReference = 85E98C502A2FCA8B0024AE92 /* HabitLab Overlay.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		926167D02B882601009C6B05 /* ShieldConfiguration */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 926167DC2B882601009C6B05 /* Build configuration list for PBXNativeTarget "ShieldConfiguration" */;
+			buildPhases = (
+				926167CD2B882601009C6B05 /* Sources */,
+				926167CE2B882601009C6B05 /* Frameworks */,
+				926167CF2B882601009C6B05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShieldConfiguration;
+			productName = ShieldConfiguration;
+			productReference = 926167D12B882601009C6B05 /* ShieldConfiguration.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -334,7 +380,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					8577D4B92B23B04300286C14 = {
@@ -353,6 +399,9 @@
 					};
 					85E98C4F2A2FCA8B0024AE92 = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					926167D02B882601009C6B05 = {
+						CreatedOnToolsVersion = 15.2;
 					};
 				};
 			};
@@ -373,6 +422,7 @@
 				85E98C162A2FC7010024AE92 /* HabitLab AppTests */,
 				85E98C202A2FC7010024AE92 /* HabitLab AppUITests */,
 				85E98C4F2A2FCA8B0024AE92 /* HabitLab Overlay */,
+				926167D02B882601009C6B05 /* ShieldConfiguration */,
 				8577D4B92B23B04300286C14 /* DeviceActivityMonitor */,
 			);
 		};
@@ -414,6 +464,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EF8325B2B68708F0007B752 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		926167CF2B882601009C6B05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926167DF2B8826AA009C6B05 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +523,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		926167CD2B882601009C6B05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926167D62B882601009C6B05 /* ShieldConfigurationExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -483,10 +549,10 @@
 			target = 85E98C062A2FC6FF0024AE92 /* HabitLab App */;
 			targetProxy = 85E98C222A2FC7010024AE92 /* PBXContainerItemProxy */;
 		};
-		85E98C592A2FCA8B0024AE92 /* PBXTargetDependency */ = {
+		926167DA2B882601009C6B05 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 85E98C4F2A2FCA8B0024AE92 /* HabitLab Overlay */;
-			targetProxy = 85E98C582A2FCA8B0024AE92 /* PBXContainerItemProxy */;
+			target = 926167D02B882601009C6B05 /* ShieldConfiguration */;
+			targetProxy = 926167D92B882601009C6B05 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -499,7 +565,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				DEVELOPMENT_TEAM = LJMYQ32856;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -532,7 +598,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				DEVELOPMENT_TEAM = LJMYQ32856;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -681,7 +747,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HabitLab App/Preview Content\"";
-				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				DEVELOPMENT_TEAM = LJMYQ32856;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -714,7 +780,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HabitLab App/Preview Content\"";
-				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				DEVELOPMENT_TEAM = LJMYQ32856;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -743,7 +809,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				DEVELOPMENT_TEAM = LJMYQ32856;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -763,7 +829,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				DEVELOPMENT_TEAM = LJMYQ32856;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -782,7 +848,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				DEVELOPMENT_TEAM = LJMYQ32856;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-AppUITests";
@@ -800,7 +866,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				DEVELOPMENT_TEAM = LJMYQ32856;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-AppUITests";
@@ -818,7 +884,7 @@
 				CODE_SIGN_ENTITLEMENTS = "HabitLab Overlay/HabitLab_Overlay.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				DEVELOPMENT_TEAM = LJMYQ32856;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "HabitLab Overlay/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "HabitLab Overlay";
@@ -829,7 +895,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-App.HabitLab-Overlay";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-App-Overlay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -844,7 +910,7 @@
 				CODE_SIGN_ENTITLEMENTS = "HabitLab Overlay/HabitLab_Overlay.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PL3M87HFJ2;
+				DEVELOPMENT_TEAM = LJMYQ32856;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "HabitLab Overlay/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "HabitLab Overlay";
@@ -855,7 +921,72 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-App.HabitLab-Overlay";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-App-Overlay";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		926167DD2B882601009C6B05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = ShieldConfiguration/ShieldConfiguration.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJMYQ32856;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShieldConfiguration/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShieldConfiguration;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-App.ShieldConfiguration";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		926167DE2B882601009C6B05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = ShieldConfiguration/ShieldConfiguration.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJMYQ32856;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShieldConfiguration/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShieldConfiguration;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.HabitLab-App.ShieldConfiguration";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -917,6 +1048,15 @@
 			buildConfigurations = (
 				85E98C5C2A2FCA8B0024AE92 /* Debug */,
 				85E98C5D2A2FCA8B0024AE92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		926167DC2B882601009C6B05 /* Build configuration list for PBXNativeTarget "ShieldConfiguration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				926167DD2B882601009C6B05 /* Debug */,
+				926167DE2B882601009C6B05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
