@@ -57,8 +57,8 @@ struct ContentView: View {
             }
             .padding(.horizontal)
             .onChange(of: model.selectionToDiscourage) { newSelection in
-                //model.setSchedule();
                 model.setShieldRestrictions();
+                model.setSchedule();
             }
         .onAppear{
             Task{
