@@ -17,11 +17,11 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
         // Customize the shield as needed for applications.
         return ShieldConfiguration(
             backgroundBlurStyle: UIBlurEffect.Style.regular,
-                        backgroundColor: UIColor.white.withAlphaComponent(0.5),
+                        backgroundColor: UIColor.white.withAlphaComponent(0.7),
                         icon: UIImage(named: "hour-glass"),
                         //title: ShieldConfiguration.Label(text: "Time Limit", color: .black),
-                        title: ShieldConfiguration.Label(text: "You're done here, loser", color: .black),
-                        secondaryButtonLabel:  ShieldConfiguration.Label(text: "Ignore Limit", color: .black)
+            title: ShieldConfiguration.Label(text: "You're done here, loser", color: .label),
+                        secondaryButtonLabel:  ShieldConfiguration.Label(text: "Ignore Limit", color: .label)
                     )
     }
     
@@ -30,11 +30,11 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
         print("Shield cofig extension")
         return ShieldConfiguration(
             backgroundBlurStyle: UIBlurEffect.Style.regular,
-                        backgroundColor: UIColor.white.withAlphaComponent(0.5),
+                        backgroundColor: UIColor.white.withAlphaComponent(0.7),
                         icon: UIImage(named: "hour-glass"),
                         //title: ShieldConfiguration.Label(text: "Time Limit", color: .black),
-                        title: ShieldConfiguration.Label(text: "You're done here, loser", color: .black),
-                        secondaryButtonLabel:  ShieldConfiguration.Label(text: "Ignore Limit", color: .black)
+                        title: ShieldConfiguration.Label(text: "You're done here, loser", color: .label),
+                        secondaryButtonLabel:  ShieldConfiguration.Label(text: "Ignore Limit", color: .label)
                     )
     }
     

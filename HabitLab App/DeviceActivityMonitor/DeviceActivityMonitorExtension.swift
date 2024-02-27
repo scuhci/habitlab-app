@@ -31,14 +31,21 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         super.eventDidReachThreshold(event, activity: activity)
         
         let categoriesToShield:Set<ActivityCategoryToken>;
+        let applicationsToShield:Set<ApplicationToken>;
+        
         let limitedStore = ManagedSettingsStore(named: .limited)
         let sharedUserDefaults = UserDefaults(suiteName: "group.com.name.habitlab")
-        guard let jsonString = sharedUserDefaults?.string(forKey: "selectedAppCategories") else {return}
+        guard let categoryTokensJsonString = sharedUserDefaults?.string(forKey: "selectedAppCategories") else {return}
+        guard let applicationTokensJsonString = sharedUserDefaults?.string(forKey: "selectedApps") else {return}
         let decoder = JSONDecoder()
         do {
-            let data = Data(jsonString.utf8)
-            categoriesToShield =  try decoder.decode(Set<ActivityCategoryToken>.self, from: data)
+            let categoryTokens = Data(categoryTokensJsonString.utf8)
+            let applicationTokens = Data(applicationTokensJsonString.utf8)
+            
+            applicationsToShield = try decoder.decode(Set<ApplicationToken>.self, from: applicationTokens)
+            categoriesToShield =  try decoder.decode(Set<ActivityCategoryToken>.self, from: categoryTokens)
             limitedStore.shield.applicationCategories = .specific(categoriesToShield)
+            //limitedStore.shield.applications = .specific(applicationsToShield)
         } catch {
             print("Error decoding tokens: \(error)")
         }
