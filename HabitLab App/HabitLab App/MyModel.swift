@@ -72,7 +72,7 @@ class MyModel: ObservableObject {
             categoryTokensSharedUserDefaults?.synchronize()
             
             let appTokens = try encoder.encode(MyModel.shared.selectionToDiscourage.applicationTokens)
-            let applicationTokensJsonString = String(data: categoryTokens, encoding: .utf8)!
+            let applicationTokensJsonString = String(data: appTokens, encoding: .utf8)!
             let applicationTokensSharedUserDefaults = UserDefaults(suiteName: "group.com.name.habitlab")
             applicationTokensSharedUserDefaults?.set(applicationTokensJsonString, forKey: "selectedApps")
             applicationTokensSharedUserDefaults?.synchronize()
