@@ -9,12 +9,14 @@ import SwiftUI
 import FamilyControls
 
 struct LandingView: View {
+    @EnvironmentObject var model: MyModel
+    
     var body: some View {
         NavigationStack {
             VStack {
                 Text("Welcome to HabitLab :)").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).fontWeight(.semibold)
                 Spacer().frame(height: 300.0)
-                NavigationLink(destination:BrowseMyAppView(selectionToDiscourage: FamilyActivitySelection())){
+                NavigationLink(destination:BrowseMyAppView(selectionToDiscourage: model.selectionToDiscourage)){
                     Text("Start🚀")
                 }
             }.padding()
@@ -24,5 +26,5 @@ struct LandingView: View {
 }
 
 #Preview {
-    LandingView()
+    LandingView().environmentObject(MyModel())
 }

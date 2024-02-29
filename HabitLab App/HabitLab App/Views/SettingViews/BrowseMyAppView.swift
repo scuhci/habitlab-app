@@ -13,9 +13,6 @@ struct BrowseMyAppView: View {
     @State var selectionToDiscourage: FamilyActivitySelection
     @State var appSelected: Bool = false
    
-    
-    
-    
     var body: some View {
         VStack {
             Text("Select apps you want to manage on your devices:").font(/*@START_MENU_TOKEN@*/.headline/*@END_MENU_TOKEN@*/)

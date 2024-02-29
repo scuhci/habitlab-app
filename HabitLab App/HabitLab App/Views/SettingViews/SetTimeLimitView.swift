@@ -8,20 +8,19 @@
 import SwiftUI
 
 struct SetTimeLimitView: View {
-    @State private var hours : Int = 0
-    @State private var minutes: Int = 0
+    @EnvironmentObject var model: MyModel
     @State private var timeSelected : Bool = false
     var body: some View {
         VStack {
             Text("Set daily time limit:").font(.headline)
             HStack{
-                Picker("", selection: $hours){
+                Picker("", selection: $model.hours){
                     ForEach(0..<24, id: \.self) { i in
                         Text("\(i)").tag(i)
                     }
                 }.pickerStyle(WheelPickerStyle())
                 Text("hours")
-                Picker("", selection: $minutes){
+                Picker("", selection: $model.minutes){
                     ForEach(0..<60, id: \.self) { i in
                         Text("\(i)").tag(i)
                     }
@@ -34,12 +33,15 @@ struct SetTimeLimitView: View {
             }
                 .buttonStyle(.borderedProminent)
             
-        }.padding().navigationDestination(isPresented: $timeSelected) {
+        }.padding().onChange(of: timeSelected) {newSelection in
+            model.setSchedule();
+            model.setShieldRestrictions()
+        }.navigationDestination(isPresented: $timeSelected) {
             ReadyInfoView()
         }
     }
 }
 
 #Preview {
-    SetTimeLimitView()
+    SetTimeLimitView().environmentObject(MyModel())
 }
