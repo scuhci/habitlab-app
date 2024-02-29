@@ -62,32 +62,15 @@ class MyModel: ObservableObject {
         : ShieldSettings.ActivityCategoryPolicy.specific(applications.categoryTokens)
     }
     
-    func storeEncodedData<T: Encodable>(data: T, key: String, suiteName: String? = nil) {
-      do {
-        let encoder = JSONEncoder()
-        let encodedData = try encoder.encode(data)
-        let jsonString = String(data: encodedData, encoding: .utf8)!
-        var userDefaults: UserDefaults!
-        if let suiteName = suiteName {
-          userDefaults = UserDefaults(suiteName: suiteName)
-        } else {
-          userDefaults = UserDefaults.standard
-        }
-        userDefaults.set(jsonString, forKey: key)
-        userDefaults.synchronize()
-        print("Data encoded and stored successfully under key: \(key)")
-      } catch {
-        print("Error encoding and storing data: \(error)")
-      }
-    }
-    
     public func setSchedule() {
         print("Setting schedule...")
-        let event = DeviceActivityEvent(
+        let events: [DeviceActivityEvent.Name: DeviceActivityEvent] = [
+            .discouraged: DeviceActivityEvent(
                 applications: MyModel.shared.selectionToDiscourage.applicationTokens,
                 categories: MyModel.shared.selectionToDiscourage.categoryTokens,
                 threshold: DateComponents(second:1)
             )
+        ]
         let encoder = JSONEncoder()
           do {
             let data = try encoder.encode(MyModel.shared.selectionToDiscourage.categoryTokens)
@@ -105,9 +88,7 @@ class MyModel: ObservableObject {
         do {
             print("Try to start monitoring...")
             // Call startMonitoring with the activity name, schedule, and events
-            try center.startMonitoring(.daily, 
-                                       during: schedule,
-                                       events:[.discouraged: event] )
+            try center.startMonitoring(.daily, during: schedule, events: events)
         } catch {
             print("Error monitoring schedule: ", error)
         }

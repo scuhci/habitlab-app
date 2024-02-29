@@ -33,7 +33,7 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         let categoriesToShield:Set<ActivityCategoryToken>;
         let limitedStore = ManagedSettingsStore(named: .limited)
         let sharedUserDefaults = UserDefaults(suiteName: "group.com.name.habitlab")
-        guard let jsonString = sharedUserDefaults?.string(forKey: "selectedAppCategories") else {return}
+        guard let jsonString = sharedUserDefaults?.string(forKey: "selectedApps") else {return}
         let decoder = JSONDecoder()
         do {
             let data = Data(jsonString.utf8)
@@ -42,6 +42,11 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         } catch {
             print("Error decoding tokens: \(error)")
         }
+        // Handle the event reaching its threshold.
+        
+        
+        
+
     }
     
     override func intervalWillStartWarning(for activity: DeviceActivityName) {
