@@ -48,3 +48,4 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
         ShieldConfiguration()
     }
 }
+
