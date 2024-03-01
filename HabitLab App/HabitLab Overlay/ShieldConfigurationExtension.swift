@@ -16,12 +16,14 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
     override func configuration(shielding application: Application) -> ShieldConfiguration {
         // Customize the shield as needed for applications.
         return ShieldConfiguration(
-            backgroundBlurStyle: UIBlurEffect.Style.regular,
-                        backgroundColor: UIColor.white.withAlphaComponent(0.5),
-                        icon: UIImage(named: "hour-glass"),
-                        //title: ShieldConfiguration.Label(text: "Time Limit", color: .black),
-                        title: ShieldConfiguration.Label(text: "You're done here, loser", color: .black),
-                        secondaryButtonLabel:  ShieldConfiguration.Label(text: "Ignore Limit", color: .black)
+                        backgroundBlurStyle: UIBlurEffect.Style.extraLight,
+                        backgroundColor: UIColor.white.withAlphaComponent(0.1),
+                        title: ShieldConfiguration.Label(text: "Habitlab", color: .black),
+                        subtitle: ShieldConfiguration.Label(
+                            text: "Habitlab",
+                            color: .black
+                        ),
+                        secondaryButtonLabel: nil
                     )
     }
     
@@ -34,7 +36,7 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
                         icon: UIImage(named: "hour-glass"),
                         //title: ShieldConfiguration.Label(text: "Time Limit", color: .black),
                         title: ShieldConfiguration.Label(text: "You're done here, loser", color: .black),
-                        secondaryButtonLabel:  ShieldConfiguration.Label(text: "Ignore Limit", color: .black)
+                        secondaryButtonLabel: nil
                     )
     }
     

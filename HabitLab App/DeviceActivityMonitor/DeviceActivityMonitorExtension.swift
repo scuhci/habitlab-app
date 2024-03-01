@@ -49,6 +49,11 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         } catch {
             print("Error decoding tokens: \(error)")
         }
+        // Handle the event reaching its threshold.
+        
+        
+        
+
     }
     
     override func intervalWillStartWarning(for activity: DeviceActivityName) {
