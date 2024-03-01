@@ -12,6 +12,7 @@ struct BrowseMyAppView: View {
     @State private var isDiscouragedPresented = false
     @State var selectionToDiscourage: FamilyActivitySelection
     @State var appSelected: Bool = false
+    @EnvironmentObject var model: MyModel
    
     var body: some View {
         VStack {
@@ -23,7 +24,7 @@ struct BrowseMyAppView: View {
                 appSelected = true
             }
                     .buttonStyle(.borderedProminent)
-                    .familyActivityPicker(isPresented: $isDiscouragedPresented, selection: $selectionToDiscourage)
+                    .familyActivityPicker(isPresented: $isDiscouragedPresented, selection: $model.selectionToDiscourage)
                 
         }.padding().navigationDestination(isPresented: $appSelected) {
             SetTimeLimitView()
