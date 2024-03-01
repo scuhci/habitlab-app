@@ -63,7 +63,7 @@ class MyModel: ObservableObject {
     }
     
     public func setSchedule() {
-        print("Setting schedule...")
+        print("Setting schedule... hours: \(hours) minites: \(minutes)")
         let events: [DeviceActivityEvent.Name: DeviceActivityEvent] = [
             .discouraged: DeviceActivityEvent(
                 applications: MyModel.shared.selectionToDiscourage.applicationTokens,
