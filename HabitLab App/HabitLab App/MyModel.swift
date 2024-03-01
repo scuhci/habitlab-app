@@ -62,26 +62,35 @@ class MyModel: ObservableObject {
         : ShieldSettings.ActivityCategoryPolicy.specific(applications.categoryTokens)
     }
     
+    public func storeTokens(){
+        let encoder = JSONEncoder()
+        do {
+            let categoryTokens = try encoder.encode(MyModel.shared.selectionToDiscourage.categoryTokens)
+            let categoryTokensJsonString = String(data: categoryTokens, encoding: .utf8)!
+            let categoryTokensSharedUserDefaults = UserDefaults(suiteName: "group.com.name.habitlab")
+            categoryTokensSharedUserDefaults?.set(categoryTokensJsonString, forKey: "selectedAppCategories")
+            categoryTokensSharedUserDefaults?.synchronize()
+            
+            let appTokens = try encoder.encode(MyModel.shared.selectionToDiscourage.applicationTokens)
+            let applicationTokensJsonString = String(data: appTokens, encoding: .utf8)!
+            let applicationTokensSharedUserDefaults = UserDefaults(suiteName: "group.com.name.habitlab")
+            applicationTokensSharedUserDefaults?.set(applicationTokensJsonString, forKey: "selectedApps")
+            applicationTokensSharedUserDefaults?.synchronize()
+            
+            print("Tokens encoded")
+           }catch {
+            print("Error encoding tokens: \(error)")
+        }
+    }
+    
     public func setSchedule() {
-        print("Setting schedule... hours: \(hours) minites: \(minutes)")
-        let events: [DeviceActivityEvent.Name: DeviceActivityEvent] = [
-            .discouraged: DeviceActivityEvent(
+        print("Setting schedule...")
+        storeTokens();
+        let event = DeviceActivityEvent(
                 applications: MyModel.shared.selectionToDiscourage.applicationTokens,
                 categories: MyModel.shared.selectionToDiscourage.categoryTokens,
                 threshold: DateComponents(second:1)
             )
-        ]
-        let encoder = JSONEncoder()
-          do {
-            let data = try encoder.encode(MyModel.shared.selectionToDiscourage.categoryTokens)
-            let jsonString = String(data: data, encoding: .utf8)!
-            let sharedUserDefaults = UserDefaults(suiteName: "group.com.name.habitlab")
-            sharedUserDefaults?.set(jsonString, forKey: "selectedAppCategories")
-            sharedUserDefaults?.synchronize()
-            print("Tokens encoded")
-          } catch {
-            print("Error encoding tokens: \(error)")
-          }
         
         // Create a Device Activity center
         let center = DeviceActivityCenter()
