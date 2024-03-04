@@ -54,7 +54,6 @@ class MyModel: ObservableObject {
     //Called when familyActivityPicker selections change
     func setShieldRestrictions() {
         print("Setting restriction..")
-        print(MyModel.shared.selectionToDiscourage)
         // Pull the selection out of the app's model and configure the application shield restriction accordingly
         let applications = MyModel.shared.selectionToDiscourage
         limitedStore.shield.applications = applications.applicationTokens.isEmpty ? nil : applications.applicationTokens
