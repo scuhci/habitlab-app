@@ -89,7 +89,7 @@ class MyModel: ObservableObject {
         let event = DeviceActivityEvent(
                 applications: MyModel.shared.selectionToDiscourage.applicationTokens,
                 categories: MyModel.shared.selectionToDiscourage.categoryTokens,
-                threshold: DateComponents(second:1)
+                threshold: DateComponents(hour:0, minute: 0, second:40)
             )
         
         // Create a Device Activity center

@@ -18,6 +18,7 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         // Handle the start of the interval.
         let limitedStore = ManagedSettingsStore(named: .limited)
         limitedStore.clearAllSettings()
+        print("test")
     }
     
     override func intervalDidEnd(for activity: DeviceActivityName) {
@@ -30,6 +31,7 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         super.eventDidReachThreshold(event, activity: activity)
         
         // Handle the event reaching its threshold.
+        print("in threshold")
         let categoriesToShield:Set<ActivityCategoryToken>;
         let applicationsToShield:Set<ApplicationToken>;
         let limitedStore = ManagedSettingsStore(named: .limited)
