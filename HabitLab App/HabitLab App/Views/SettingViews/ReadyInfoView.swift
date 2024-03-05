@@ -6,8 +6,16 @@
 //
 
 import SwiftUI
+import DeviceActivity
+
+extension DeviceActivityReport.Context {
+    static let totalActivity = Self("Total Activity")
+}
 
 struct ReadyInfoView: View {
+    @EnvironmentObject var model: MyModel
+    @State private var context: DeviceActivityReport.Context = .totalActivity
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text("Fantastic🎉!").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).fontWeight(.semibold).lineSpacing(/*@START_MENU_TOKEN@*/10.0/*@END_MENU_TOKEN@*/)
@@ -25,10 +33,18 @@ struct ReadyInfoView: View {
                 Button("Got it!") {}
                     .buttonStyle(.borderedProminent)
             }
+            DeviceActivityReport(context, filter: DeviceActivityFilter(
+                segment: .daily(
+                    during: Calendar.current.dateInterval(
+                       of: .weekOfYear, for: .now
+                    )!
+                ),
+                users: .children,
+                devices: .init([.iPhone, .iPad]),
+                applications: model.selectionToDiscourage.applicationTokens,
+                categories: model.selectionToDiscourage.categoryTokens
+            ))
         }.padding()
-
-       
-        
     }
 }
 
