@@ -15,17 +15,23 @@ struct BrowseMyAppView: View {
     @EnvironmentObject var model: MyModel
    
     var body: some View {
-        VStack {
-            Text("Select apps you want to manage on your devices:").font(/*@START_MENU_TOKEN@*/.headline/*@END_MENU_TOKEN@*/)
-            Spacer().frame(height: 300.0)
-            
-            Button("Browse my App") {
+        VStack (spacing: 10) {
+            Text("Set daily time limits for apps you want to manage on " + UIDevice.current.name + ".")
+                .font(/*@START_MENU_TOKEN@*/.headline/*@END_MENU_TOKEN@*/)
+                .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+            Button {
                 isDiscouragedPresented = true
                 appSelected = true
+            } label: {
+                HStack {
+                    Text("Add limit")
+                    Spacer()
+                }
             }
+            .buttonStyle(.bordered)
                     .buttonStyle(.borderedProminent)
                     .familyActivityPicker(isPresented: $isDiscouragedPresented, selection: $model.selectionToDiscourage)
-                
+            Spacer()
         }.padding().navigationDestination(isPresented: $appSelected) {
             SetTimeLimitView()
         }

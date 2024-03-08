@@ -18,21 +18,22 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         // Handle the start of the interval.
         let limitedStore = ManagedSettingsStore(named: .limited)
         limitedStore.clearAllSettings()
+        print("test")
     }
     
     override func intervalDidEnd(for activity: DeviceActivityName) {
         super.intervalDidEnd(for: activity)
         
-        // Handle the end of the interval.
-        
+        // Handle the end of the interval.      
     }
     
     override func eventDidReachThreshold(_ event: DeviceActivityEvent.Name, activity: DeviceActivityName) {
         super.eventDidReachThreshold(event, activity: activity)
         
+        // Handle the event reaching its threshold.
+        print("in threshold")
         let categoriesToShield:Set<ActivityCategoryToken>;
         let applicationsToShield:Set<ApplicationToken>;
-        
         let limitedStore = ManagedSettingsStore(named: .limited)
         let sharedUserDefaults = UserDefaults(suiteName: "group.com.name.habitlab")
         guard let categoryTokensJsonString = sharedUserDefaults?.string(forKey: "selectedAppCategories") else {return}
@@ -45,14 +46,10 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
             applicationsToShield = try decoder.decode(Set<ApplicationToken>.self, from: applicationTokens)
             categoriesToShield =  try decoder.decode(Set<ActivityCategoryToken>.self, from: categoryTokens)
             limitedStore.shield.applicationCategories = .specific(categoriesToShield)
-            //limitedStore.shield.applications = .specific(applicationsToShield)
+            limitedStore.shield.applications = applicationsToShield
         } catch {
             print("Error decoding tokens: \(error)")
         }
-        // Handle the event reaching its threshold.
-        
-        
-        
 
     }
     

@@ -32,9 +32,9 @@ struct SetTimeLimitView: View {
                 timeSelected = true
             }
                 .buttonStyle(.borderedProminent)
-            
         }.padding().onChange(of: timeSelected) {newSelection in
             //model.setSchedule();
+            //Emable this to test shield on simulator
             model.setShieldRestrictions()
         }.navigationDestination(isPresented: $timeSelected) {
             ReadyInfoView()
