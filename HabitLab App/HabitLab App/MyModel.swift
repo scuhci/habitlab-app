@@ -51,7 +51,7 @@ class MyModel: ObservableObject {
         return _MyModel
     }
     
-    //Called when familyActivityPicker selections change
+    //Used to test shield on simulator
     func setShieldRestrictions() {
         print("Setting restriction..")
         // Pull the selection out of the app's model and configure the application shield restriction accordingly
@@ -89,7 +89,7 @@ class MyModel: ObservableObject {
         let event = DeviceActivityEvent(
                 applications: MyModel.shared.selectionToDiscourage.applicationTokens,
                 categories: MyModel.shared.selectionToDiscourage.categoryTokens,
-                threshold: DateComponents(second:1)
+                threshold: DateComponents(hour:hours, minute:minutes)
             )
         
         // Create a Device Activity center
@@ -98,8 +98,8 @@ class MyModel: ObservableObject {
             print("Try to start monitoring...")
             // Call startMonitoring with the activity name, schedule, and events
             try center.startMonitoring(.daily,
-                                                   during: schedule,
-                                                   events:[.discouraged: event] )        }
+                                        during: schedule,
+                                        events:[.discouraged: event] )}
         catch {
             print("Error monitoring schedule: ", error)
         }

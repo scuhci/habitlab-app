@@ -18,7 +18,7 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
                     backgroundColor: UIColor.white.withAlphaComponent(0.5),
                     icon: UIImage(named: "hour-glass"),
                     //title: ShieldConfiguration.Label(text: "Time Limit", color: .black),
-                    title: ShieldConfiguration.Label(text: "You're done here, loser", color: .black),
+        title: ShieldConfiguration.Label(text: "You're done here, loser", color: .label),
                     secondaryButtonLabel: nil
     );
     override func configuration(shielding application: Application) -> ShieldConfiguration {
